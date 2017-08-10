@@ -1,0 +1,4 @@
+.classpath
+tmp/
+target/
+template-output.json
