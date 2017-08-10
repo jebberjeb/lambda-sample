@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform:
+- AWS::Serverless-2016-10-31
+- AWS::CodeStar
+
+Parameters:
+  ProjectId:
+    Type: String
+    Description: AWS CodeStar projectID used to associate new resources to team members
+
+Resources:
+  SimpleLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: "com.jebbeich.simple::handler"
+      Runtime: java8
+      MemorySize: 320
+      Timeout: 3
+      Role:
+        Fn::ImportValue:
+          !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
