@@ -6,6 +6,7 @@ Resources:
   SimpleLambda:
     Type: AWS::Lambda::Function
     Properties:
+      FunctionName: SimpleLambda
       Handler: "com.jebbeich.simple::handler"
       Runtime: java8
       MemorySize: 320
