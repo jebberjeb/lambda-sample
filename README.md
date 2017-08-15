@@ -24,7 +24,7 @@ Optionally, build & deployment can be pushed to the AWS cloud.
 
 The `buildspec.yml` file can be used to create an AWS CodeBuild. The build can
 then be integrated into an AWS CodePipeline using the resulting
-`template-output.json` artifcat.
+`template-output.json` artifact.
 
 # TODO
 
