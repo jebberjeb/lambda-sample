@@ -5,6 +5,8 @@ This is a minimal example of an AWS Lambda in Clojure.
 # Prerequisites
 
 * Install `aws` cli tool.
+* Replace `com-jebbeich` in `template.yml` with an S3 bucket to contain the
+CloudWatch artifacts.
 
 # Development
 
