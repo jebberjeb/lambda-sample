@@ -5,8 +5,6 @@ This is a minimal example of an AWS Lambda in Clojure.
 # Prerequisites
 
 * Install `aws` cli tool.
-* Create an IAM role, give it AWSLambdaBasicExecutionRole policy.
-* Update `template.yml` to use that role.
 
 # Development
 
@@ -25,8 +23,3 @@ Optionally, build & deployment can be pushed to the AWS cloud.
 The `buildspec.yml` file can be used to create an AWS CodeBuild. The build can
 then be integrated into an AWS CodePipeline using the resulting
 `template-output.json` artifact.
-
-# TODO
-
-The IAM role assigned in `template.yml` should be created as part of the
-template itself.

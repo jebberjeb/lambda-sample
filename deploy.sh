@@ -13,5 +13,5 @@ rm -rf target src buildspec.yml project.clj pom.xml lambda-sample-0.1.0-standalo
 # Why use cloudformation here, rather than lambda directly? Becaues we can
 # reuse the build artifacts w/ the CI pipeline.
 aws cloudformation package --template-file template.yml --s3-bucket com-jebbeich --output-template template-output.json
-aws cloudformation deploy --template-file template-output.json --stack-name simple-lambda-stack
+aws cloudformation deploy --template-file template-output.json --stack-name simple-lambda-stack --capabilities CAPABILITY_IAM
 
